@@ -1,9 +1,9 @@
 
-class ExampleClass {
+class FirstClass {
 private:
   int a;
 
 public:
-  ExampleClass(int initialization_variable);
+  FirstClass(int initialization_variable);
   int GetIncreasedVariable() const;
 };
