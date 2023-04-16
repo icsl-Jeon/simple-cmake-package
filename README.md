@@ -1,4 +1,4 @@
-# CMake project quick-start 🥷 
+# CMake project quick-starter 🥷 
 
 ## 1. Installation of this package 
 ```shell
