@@ -23,6 +23,7 @@ foreach(SUBFOLDER ${PROJECT_SUBFOLDERS})
 endforeach()
 
 add_library(${PROJECT_NAME} SHARED ${LIBRARY_SOURCES})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 install(
   TARGETS ${PROJECT_NAME}
