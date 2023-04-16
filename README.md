@@ -1,6 +1,6 @@
-CMake project quick-start 🥷 
+# CMake project quick-start 🥷 
 
-## Installation of this package 
+## 1. Installation of this package 
 ```shell
 git clone https://github.com/icsl-Jeon/simple-cmake-package.git
 mkdir build && cd build && cmake ..
@@ -8,7 +8,7 @@ make
 sudo make install
 ```
 
-## Using this package from other package (say, client_package)
+## 2. Using this package from other package (say, client_package)
 ### `CMakeLists.txt` of `client_package`
 ```cmake
 cmake_minimum_required(VERSION 3.15.0)
