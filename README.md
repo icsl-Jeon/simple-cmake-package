@@ -1,8 +1,9 @@
-# CMake project quick-starter 🥷 
+# CMake project quick-starter 😎
 
 ## 1. Installation of this package 
 ```shell
 git clone https://github.com/icsl-Jeon/simple-cmake-package.git
+cd simple-cmake-package
 mkdir build && cd build && cmake ..
 make 
 sudo make install
