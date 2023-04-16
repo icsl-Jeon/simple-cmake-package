@@ -1,7 +1,8 @@
 #pragma once
+#include "first_class/FirstClass.hpp"
 class SecondClass {
 private:
-  int a;
+  FirstClass first_class_;
 
 public:
   SecondClass(int initialization_variable);

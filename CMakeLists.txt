@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15.0)
-project(simple_package VERSION 0.1.0)
+project(simple_package)
 set(PACKAGE_EXPORT_NAME SimplePackage)
 set(CMAKE_BUILD_TYPE Debug)
 set(SOURCE_FOLDERS "first_class" "second_class")
@@ -14,11 +14,8 @@ file(
 set(LIBRARY_SOURCES "")
 
 foreach(SUBFOLDER ${PROJECT_SUBFOLDERS})
-  # Check if the subfolder is a directory
   if(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${SUBFOLDER})
-    # Include all the cpp and hpp files in the subfolder
     file(GLOB SUBFOLDER_SOURCES "${SUBFOLDER}/*.cpp" "${SUBFOLDER}/*.hpp")
-    # Add the sources to the library sources list
     list(APPEND LIBRARY_SOURCES ${SUBFOLDER_SOURCES})
   endif()
 endforeach()
