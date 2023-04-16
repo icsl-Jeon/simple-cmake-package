@@ -25,15 +25,12 @@ add_library(${PROJECT_NAME} SHARED ${LIBRARY_SOURCES})
 
 foreach(SUBFOLDER ${PROJECT_SUBFOLDERS})
   if(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${SUBFOLDER})
-    target_include_directories(
-      ${PROJECT_NAME}
-      PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${SUBFOLDER}>
-             $<INSTALL_INTERFACE:include/${SUBFOLDER}>)
+    include_directories(
+      ${PROJECT_NAME} PUBLIC
+      $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${SUBFOLDER}>
+      $<INSTALL_INTERFACE:include/${SUBFOLDER}>)
   endif()
 endforeach()
-
-get_target_property(INCLUDE_DIRS ${PROJECT_NAME} INCLUDE_DIRECTORIES)
-message("Include directories of ${PROJECT_NAME}: ${INCLUDE_DIRS}")
 
 install(
   TARGETS ${PROJECT_NAME}
