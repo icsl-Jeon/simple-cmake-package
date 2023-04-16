@@ -1,4 +1,4 @@
-
+#pragma once
 class FirstClass {
 private:
   int a;
