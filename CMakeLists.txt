@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15.0)
 project(simple_package)
 set(PACKAGE_EXPORT_NAME SimplePackage)
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 set(SOURCE_FOLDERS "first_class" "second_class")
 
 # Uncomment the below if you want to other directory (default: /usr/local)
@@ -15,7 +15,9 @@ set(LIBRARY_SOURCES "")
 
 foreach(SUBFOLDER ${PROJECT_SUBFOLDERS})
   if(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${SUBFOLDER})
-    file(GLOB SUBFOLDER_SOURCES "${SUBFOLDER}/*.cpp" "${SUBFOLDER}/*.hpp")
+    file(GLOB SUBFOLDER_SOURCES
+         "${CMAKE_CURRENT_SOURCE_DIR}/${SUBFOLDER}/*.cpp"
+         "${CMAKE_CURRENT_SOURCE_DIR}/${SUBFOLDER}/*.hpp")
     list(APPEND LIBRARY_SOURCES ${SUBFOLDER_SOURCES})
   endif()
 endforeach()
