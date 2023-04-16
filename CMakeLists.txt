@@ -33,6 +33,9 @@ foreach(SUBFOLDER ${PROJECT_SUBFOLDERS})
   endif()
 endforeach()
 
+get_target_property(INCLUDE_DIRS ${PROJECT_NAME} INCLUDE_DIRECTORIES)
+message("Include directories of ${PROJECT_NAME}: ${INCLUDE_DIRS}")
+
 install(
   TARGETS ${PROJECT_NAME}
   EXPORT ${PACKAGE_EXPORT_NAME}
