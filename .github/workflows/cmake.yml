@@ -26,4 +26,4 @@ jobs:
       run: mkdir build && cd build && cmake ../
     - name: Build
       # Build your program with the given configuration
-      run: make && sudo make install
+      run: cd build && make && sudo make install
